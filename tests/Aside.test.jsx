@@ -3,7 +3,6 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Aside from '../src/components/aside';
 
-
 describe('Testado o aside do dashboard', () => {
   it('Deve retornar o componente aside e o conteudo dele', () => {
     render(<Aside />)
