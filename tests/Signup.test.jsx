@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import SignupForm from '../src/components/signup';
 
 describe('Retornar o componente SignupForm', () => {
@@ -29,9 +30,9 @@ describe('Retornar o componente SignupForm', () => {
     it('Deve renderizar as opções', () => {
       render(<SignupForm />);
       expect(screen.getAllByRole('option').length).toBeGreaterThan(0);
-      expect(screen.getByRole('option', { name: 'user' })).toBeInTheDocument();
-      expect(screen.getByRole('option', { name: 'admin' })).toBeInTheDocument();
-      expect(screen.getByRole('option', { name: 'author' })).toBeInTheDocument();
+      expect(screen.getByRole('option', { name: 'Usuário' })).toBeInTheDocument();
+      expect(screen.getByRole('option', { name: 'Administrador' })).toBeInTheDocument();
+      expect(screen.getByRole('option', { name: 'Autor' })).toBeInTheDocument();
     });
   });
 
