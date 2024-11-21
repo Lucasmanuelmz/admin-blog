@@ -1,0 +1,21 @@
+.navbar-container {
+  border-right: solid 1px var(--bg-footer);
+  padding: 10px;
+}
+
+.dashboard {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.list {
+  list-style: none;
+}
+
+.list-hidden {
+  display: none;
+}
+
+.aside-navbar {
+  margin: 15px 0;
+}

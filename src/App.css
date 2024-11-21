@@ -1,42 +1,113 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+  --background: #f9f9f9;
+  --text: #333333;
+  --link: #4caf50;
+  --subtitles: #757575;
+  --errorMessage: #f44336;
+  --bg-footer: #eeeeee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-footer);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
+h2,
+h3,
+h4 {
+  color: var(--subtitles);
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  line-height: 1.6;
+  margin-left: 5px;
+}
+
+footer {
+  background-color: var(--bg-footer);
+  color: var(--subtitles);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-container {
+  width: 100%;
+  display: inline-grid;
+  background-color: var(--background);
+  grid-template: 1fr 1fr 1fr 0.3fr/1fr 1fr 1fr 1fr 1fr;
+}
+
+.content-container {
+  grid-column: 2/6;
+  grid-row: 1/4;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  width: 150px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.photo {
+  width: 60px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.aside {
+  padding: 15px;
+  overflow-y: auto;
+  background-color: var(--background);
+  grid-column: 1/2;
+  grid-row: 1/4;
 }
 
-.card {
-  padding: 2em;
+.aside a {
+  color: var(--subtitles);
 }
 
-.read-the-docs {
-  color: #888;
+span {
+  display: flex;
+  align-items: center;
+}
+
+footer {
+  grid-column: 1/6;
+  grid-row: 4/5;
+}
+
+.header {
+  background-color: var(--background);
+  grid-column: 2/6;
+  padding: 15px;
+  border-bottom: solid 0.025rem var(--bg-footer);
+}
+
+.header a {
+  color: var(--subtitles);
+}
+
+.header ul {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  list-style: none;
+  padding: 0 10px;
+}
+
+.post-container {
+  background-color: var(--background);
+  padding: 30px 20px;
+  grid-column: 2/6;
+  grid-row: 2/5;
+}
+
+.input-text {
+  padding: 10px;
+  margin-top: 8px;
 }
