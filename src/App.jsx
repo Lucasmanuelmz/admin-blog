@@ -1,8 +1,8 @@
-import Aside from "./components/aside";
-import Footer from "./components/footer";
-import Header from "./components/header";
+import Aside from './containers/aside/index'
+import Footer from "./containers/footer";
+import Header from "./containers/header";
 import "./App.css";
-import PostEditor from "./components/createPost";
+import { Outlet } from "react-router-dom";
 
 export default function App() {
   return (
@@ -10,7 +10,7 @@ export default function App() {
       <Aside />
       <div className="content-container">
         <Header />
-        <PostEditor />
+        <Outlet />
       </div>
       <Footer />
     </div>
